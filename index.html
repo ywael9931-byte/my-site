@@ -1,1 +1,223 @@
+<!DOCTYPE html>
+<html lang="ar">
 
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For You ❤️</title>
+
+<style>
+
+body{
+margin:0;
+padding:0;
+background:black;
+font-family:Arial;
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+/* صفحة الباسورد */
+
+#passwordPage{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+}
+
+input{
+padding:12px;
+width:220px;
+border:none;
+border-radius:12px;
+font-size:18px;
+text-align:center;
+outline:none;
+}
+
+button{
+padding:12px 25px;
+margin-top:15px;
+border:none;
+border-radius:12px;
+background:red;
+color:white;
+font-size:18px;
+cursor:pointer;
+}
+
+/* صفحة الاختيار */
+
+#choicePage{
+display:none;
+height:100vh;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+}
+
+/* الصفحة الرئيسية */
+
+#mainPage{
+display:none;
+padding:20px;
+padding-bottom:120px;
+}
+
+.card{
+margin-bottom:60px;
+}
+
+.card img{
+width:90%;
+max-width:300px;
+border-radius:20px;
+box-shadow:0 0 20px red;
+}
+
+.card p{
+font-size:22px;
+margin-top:15px;
+line-height:1.8;
+}
+
+/* شريط الموسيقى */
+
+.music-bar{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:#111;
+padding:10px;
+}
+
+audio{
+width:100%;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- صفحة الباسورد -->
+
+<div id="passwordPage">
+
+<h1>Enter Password ❤️</h1>
+
+<input type="password" id="password">
+
+<button onclick="checkPassword()">
+Open
+</button>
+
+</div>
+
+<!-- صفحة الاختيار -->
+
+<div id="choicePage">
+
+<h1>
+هل تريد التكملة؟ ❤️
+</h1>
+
+<button onclick="enterSite()">
+اكمل
+</button>
+
+<button onclick="window.close()">
+خروج
+</button>
+
+</div>
+
+<!-- الصفحة الرئيسية -->
+
+<div id="mainPage">
+
+<div class="card">
+
+<img src="https://i.imgur.com/8Km9tLL.jpg">
+
+<p>
+يمكن بعض الصور تفضل عالقه...
+مهما مر الوقت ❤️
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="https://i.imgur.com/j6YjvXG.jpg">
+
+<p>
+ويمكن بعض الأشخاص...
+يكونوا راحه بدون سبب ❤️
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="https://i.imgur.com/2DhmtJ4.jpg">
+
+<p>
+وفي ناس...
+وجودهم وحده كفاية ❤️
+</p>
+
+</div>
+
+</div>
+
+<!-- الموسيقى -->
+
+<div class="music-bar">
+
+<audio controls autoplay loop>
+
+<source src="music.mp3" type="audio/mpeg">
+
+</audio>
+
+</div>
+
+<script>
+
+function checkPassword(){
+
+let pass =
+document.getElementById("password").value;
+
+if(pass=="1234"){
+
+document.getElementById("passwordPage").style.display="none";
+
+document.getElementById("choicePage").style.display="flex";
+
+}else{
+
+alert("Wrong Password");
+
+}
+
+}
+
+function enterSite(){
+
+document.getElementById("choicePage").style.display="none";
+
+document.getElementById("mainPage").style.display="block";
+
+}
+
+</script>
+
+</body>
+</html>
