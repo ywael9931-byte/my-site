@@ -268,7 +268,24 @@ document.getElementById("choicePage").style.display="flex";
 alert("Wrong Password");
 
 }
+let runBtn = document.getElementById("runBtn");
 
+runBtn.addEventListener("touchstart", moveButton);
+runBtn.addEventListener("mouseover", moveButton);
+
+function moveButton(){
+
+let x = Math.random() * (window.innerWidth - 200);
+
+let y = Math.random() * (window.innerHeight - 200);
+
+runBtn.style.position = "absolute";
+
+runBtn.style.left = x + "px";
+
+runBtn.style.top = y + "px";
+
+}
 }
 
 function enterSite(){
