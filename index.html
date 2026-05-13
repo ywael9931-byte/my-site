@@ -257,7 +257,7 @@ function checkPassword(){
 let pass =
 document.getElementById("password").value;
 
-if(pass=="882008"){
+if(pass=="8/8/2008"){
 
 document.getElementById("passwordPage").style.display="none";
 
@@ -268,6 +268,19 @@ document.getElementById("choicePage").style.display="flex";
 alert("Wrong Password");
 
 }
+
+}
+
+function enterSite(){
+
+document.getElementById("choicePage").style.display="none";
+
+document.getElementById("mainPage").style.display="block";
+
+}
+
+/* الزر الهارب */
+
 let runBtn = document.getElementById("runBtn");
 
 runBtn.addEventListener("touchstart", moveButton);
@@ -284,15 +297,6 @@ runBtn.style.position = "absolute";
 runBtn.style.left = x + "px";
 
 runBtn.style.top = y + "px";
-
-}
-}
-
-function enterSite(){
-
-document.getElementById("choicePage").style.display="none";
-
-document.getElementById("mainPage").style.display="block";
 
 }
 
