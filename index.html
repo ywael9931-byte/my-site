@@ -173,10 +173,11 @@ Welcome
 </div>
 
 <div class="passText">
-(8/8/2008)
+اكتب عيد ميلادك 
 </div>
 
 <input type="text" id="password" placeholder="يوم/شهر/سنة">
+  
   
 
 <button class="openBtn" onclick="checkPassword()">
@@ -270,24 +271,16 @@ Welcome
 </div>
 
 <script>
-
 function checkPassword(){
-
-let pass =
-document.getElementById("password").value;
-
-if(pass=="5/5/2009"){
-
-document.getElementById("passwordPage").style.display="none";
-
-document.getElementById("choicePage").style.display="flex";
-
-}else{
-
-alert("Wrong Password");
-
+    let pass = document.getElementById("password").value.trim();
+    if(pass !== ""){
+        document.getElementById("passwordPage").style.display="none";
+        document.getElementById("choicePage").style.display="flex";
+    } else {
+        alert("اكتب تاريخ ميلادك الأول! ❤️");
+    }
 }
-
+  
 }
 
 function enterSite(){
